@@ -5,10 +5,13 @@ import os
 
 
 def pose_detector_predict(file_name):
-    """ This"""
+    """ 
+    Predict the Pose Detection
+    and export the Video and the Json
+    """
 
     # pose model from ultralytics
-    model = YOLO("yolov8m-pose.pt")
+    model = YOLO("src/posedetector/yolov8m-pose.pt")
 
     video_path = f'input-files/{file_name}'
     cut_file_name = os.path.splitext(os.path.basename(video_path))[0]
