@@ -1,8 +1,9 @@
 import posedetector
 
-# charger notre video
-file_name='mini_zaina480p.mp4'
+# Add your video name here
+file_name='yourvideo.mp4'
 
+# this run the prediction
 posedetector.pose_detector_predict(file_name)
 
 # des que je fais des changement je dois reinstaller le build avec cette commande : pip install src/
