@@ -1,4 +1,5 @@
 # Pose Detector from Trasce Project
+![image](examples/examples.png)
 
 ## Overview
 - Here is a code for predicting the rythme in theatrical staging
