@@ -3,14 +3,14 @@ import json
 import cv2
 import os
 
-def pose_detector_predict(video_file_name, key_stop_process):
+def pose_detector_predict(video_file_name, key_stop_process, yolo_model_path):
     """ 
     Predict the Pose Detection
     and export the Video and the Json 
     """
 
     # Ultralytics Pose Model
-    model = YOLO("src/posedetector/yolov8m-pose.pt")
+    model = YOLO(yolo_model_path)
 
     # Folder path and filename
     video_path = f'input-files/{video_file_name}'
