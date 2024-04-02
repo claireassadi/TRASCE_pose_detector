@@ -20,3 +20,9 @@
 ### the json file
 - you get _frame by frame_ the pixel coordinates (x,y) for each 17 COCO keypoints and this for every person
 - keypoint_figure_1 = id 1 in the video export
+
+### Reading frame by frame
+- use this [website](https://somewes.com/frame-count/)
+- use VLC click **"E"** on your keyboard to go frame by frame _forward_
+- but their's no key for going backward
+- You can use the arrows on your keyboard to go 10 seconds backward < or forward >
