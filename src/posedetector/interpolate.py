@@ -34,7 +34,7 @@ def interpolate_missing_values(file_name):
                                 # interpolate taking the mean of the value of the frame before and after
                                 interpolated_value_x = (data[j][person_name][keypoint_name]['x'] + data[k][person_name][keypoint_name]['x']) / 2
                                 interpolated_value_y = (data[j][person_name][keypoint_name]['y'] + data[k][person_name][keypoint_name]['y']) / 2
-                                # Cahnge the value of the actual frame
+                                # Change the value of the actual frame
                                 keypoint_data['x'] = interpolated_value_x
                                 keypoint_data['y'] = interpolated_value_y
                             else:
@@ -51,7 +51,7 @@ def interpolate_missing_values(file_name):
                                 keypoint_data['x'] = data[k][person_name][keypoint_name]['x']
                                 keypoint_data['y'] = data[k][person_name][keypoint_name]['y']
 
-    # Exporte the values in the json file
+    # Export the values in the json file
     output_directory = 'export-results/json/'
     os.makedirs(output_directory, exist_ok=True)
     cut_file_name = os.path.splitext(os.path.basename(json_file_path))[0]

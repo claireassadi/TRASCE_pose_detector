@@ -2,12 +2,35 @@ from ultralytics import YOLO
 import json
 import cv2
 import os
+import urllib.request
+import shutil
 
 def pose_detector_predict(video_file_name, key_stop_process, yolo_model_path):
     """ 
     Predict the Pose Detection
     and export the Video and the Json 
     """
+    # Function to download the file from a given URL to a specified destination
+    def download_file(url, destination):
+        try:
+            with urllib.request.urlopen(url) as response, open(destination, 'wb') as out_file:
+                shutil.copyfileobj(response, out_file)
+            print("YOLOv8 pose model downloaded.")
+        except Exception as e:
+            print(f"Something went wrong downloading the YOLOv8 model: {e}")
+
+    # URL of the YOLOv8 model
+    url_du_fichier = "https://github.com/ultralytics/assets/releases/download/v8.1.0/yolov8m-pose.pt"
+    
+    # Destination path to save the model
+    chemin_destination = "models/yolov8m-pose.pt"
+
+    # Check if the YOLOv8 model file exists in the models directory
+    if 'yolov8m-pose.pt' not in os.listdir('models'):
+        # If not, download the model
+        download_file(url_du_fichier, chemin_destination)
+    else:
+        print("YOLOv8 pose model already exists.")
 
     # Ultralytics Pose Model
     model = YOLO(yolo_model_path)
