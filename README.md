@@ -69,3 +69,7 @@
 ## RESULTS
 ![image2](examples/example_img_for_github/video_test_2_example.gif)
 ![image2](examples/example_img_for_github/figure_video_test_2.png)
+
+## LICENSE
+- This code was designed as part of Theo Heugebaert's thesis at the university Rennes 2, France, and developed by Claire Assadi.
+- [TRASCE_pose_detector](https://chooser-beta.creativecommons.org/?lang=fr) © 2024 by Théo Heugebaert and Claire Assadi is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1)
